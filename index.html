@@ -568,6 +568,201 @@
         © Copyright 2022, All Rights Reserved by ClarityUI
       </p>
     </footer>
-    
+    <!-- eleven component -->
+    <div class="eleven-container">
+      <div class="eleven-left-section">
+        <div class="eleven-header">
+          <h1>Welcome to our community</h1>
+          <p>
+            Clarity gives you the blocks & components you need to create a truly
+            professional website.
+          </p>
+        </div>
+        <div class="eleven-content">
+          <div class="eleven-star-container">
+            <div class="eleven-star">&#9733;</div>
+            <div class="eleven-star">&#9733;</div>
+            <div class="eleven-star">&#9733;</div>
+            <div class="eleven-star">&#9733;</div>
+            <div class="eleven-star">&#9733;</div>
+          </div>
+          <p>
+            "We love Landingfolio! Our designers were using it for their
+            projects, so we already knew what kind of design they want."
+          </p>
+          <div class="eleven-profile-container">
+            <img src="./assetts/Clarity-profile.png" />
+            <div class="eleven-profile-content">
+              <h3>Devon Lane</h3>
+              <p>Co-Founder, Design.co</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eleven-right-section">
+        <h1>Join Clarity</h1>
+        <p>
+          Clarity gives you the blocks and components you need to create a truly
+          professional website.
+        </p>
+        <form>
+          <label class="form-label" for="name">Full name</label>
+          <input
+            class="form-input"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+
+          <label class="form-label" for="email">Email Address</label>
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+
+          <label class="form-label" for="password">Password</label>
+          <input
+            class="form-input"
+            type="password"
+            id="password"
+            name="password"
+            required
+          />
+
+          <div class="remember-forgot">
+            <label>
+              <input class="checkbox-label" type="checkbox" id="rememberMe" />
+              Remember Me
+            </label>
+            <a href="#" class="forgot-pswrd">Forgot Password?</a>
+          </div>
+          <button class="clarity-signup-btn">Sign Up</button>
+          <div class="signup-row">
+            <span class="Account-text">Don't have an account?</span>
+            <a href="#" class="Acc-Create-text">Create free account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- twelve component -->
+    <div class="twelve-container">
+      <div class="FAQ-section container">
+        <span class="faq-subtitle">FAQ</span>
+        <h1>Answers to our frequently asked questions</h1>
+        <div class="faq-container">
+          <div class="faq">
+            <div class="question">
+              <span>Is this product for me?</span>
+              <span class="plus-icon"><i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <div class="faq">
+            <div class="question">
+              <span>What is Tailwind CSS?</span>
+              <span class="plus-icon"><i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="answer">
+              Tailwind CSS is a CSS framework like Bootstrap, that speeds up
+              development time for developers. Tailwind CSS uses classes to
+              style elements, meaning you do not have to write any CSS.
+            </div>
+          </div>
+          <div class="faq">
+            <div class="question">
+              <span>Does this work with Wordpress?</span>
+              <span class="plus-icon"><i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <div class="faq">
+            <div class="question">
+              <span>What is your refund policy?</span>
+              <span class="plus-icon"><i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- thirteen component -->
+    <div class="thirteen-container container">
+      <h1>Sign in to your account</h1>
+      <p>
+        Clarity gives you the blocks and components you need to create a truly
+        professional website.
+      </p>
+      <form class="form-container">
+        <input
+          class="second-form-input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Email Address"
+          required
+        />
+        <input
+          class="second-form-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Create Password"
+          required
+        />
+        <div class="remember-forgot-container">
+          <label>
+            <input
+              class="second-checkbox-label"
+              type="checkbox"
+              id="rememberMe"
+            />
+            Remember Me
+          </label>
+          <a href="#" class="second-forgot-pswrd">Forgot Password?</a>
+        </div>
+        <button class="second-signup-btn">Sign Up</button>
+        <div class="signup-row">
+          <span class="Account-text">Don't have an account?</span>
+          <a href="#" class="Acc-Create-text">Sign up</a>
+        </div>
+      </form>
+    </div>
+    <!-- JavaScript for FAQ -->
+
+    <script>
+      const faqs = document.querySelectorAll(".faq");
+
+      faqs.forEach((faq) => {
+        const icon = faq.querySelector(".plus-icon");
+
+        faq.addEventListener("click", () => {
+          faq.classList.toggle("active");
+          if (faq.classList.contains("active")) {
+            icon.innerHTML = '<i class="fas fa-arrow-up"></i>';
+          } else {
+            icon.innerHTML = '<i class="fas fa-arrow-right"></i>';
+          }
+        });
+      });
+    </script>
   </body>
 </html>

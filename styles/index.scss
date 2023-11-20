@@ -990,3 +990,452 @@ a:hover {
     grid-column: 1 / -1;
   }
 }
+//  eleven component
+.eleven-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  overflow: hidden;
+  margin-top: 5rem;
+  @include lg-down {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  @include md-down {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.eleven-left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../assetts/Clarity-BG.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: $white-color;
+  padding: 60px;
+  @include lg-down {
+    padding: 20px;
+  }
+}
+.eleven-star-container {
+  color: $yellow-300;
+  font-size: 2em;
+}
+.eleven-star {
+  display: inline-block;
+  margin-right: 5px;
+}
+.eleven-profile-container {
+  display: flex;
+  gap: 20px;
+  @include md-down {
+    flex-direction: column;
+  }
+}
+.eleven-header h1 {
+  font-family: Poppins;
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 66px;
+  letter-spacing: -2px;
+  text-align: left;
+  @include lg-down {
+    font-size: 3rem;
+  }
+  @include md-down {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+.eleven-header p {
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $blue-gray-3;
+  @include lg-down {
+    font-size: 1rem;
+  }
+}
+.eleven-content p {
+  font-family: Poppins;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0px;
+  text-align: left;
+  @include lg-down {
+    font-size: 1.2rem;
+  }
+}
+.eleven-profile-content h3 {
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: left;
+}
+.eleven-profile-content p {
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.eleven-profile-container img {
+  max-width: 44.99px;
+  height: 44.99px;
+}
+.eleven-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.eleven-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $base-2;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  background-color: linear-gradient(0deg, #cbd5e1, #cbd5e1);
+  color: linear-gradient(0deg, #f8fafc, #f8fafc);
+  border-radius: 12px;
+  max-width: 526px;
+  height: 60px;
+}
+.eleven-right-section h1 {
+  font-family: Poppins;
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 62px;
+  letter-spacing: -2px;
+  text-align: left;
+  color: $base-2;
+  @include md-down {
+    font-size: 2rem;
+  }
+}
+.eleven-right-section p {
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $gray-600;
+  @include md-down {
+    font-size: 1rem;
+  }
+}
+.clarity-signup-btn {
+  background-color: $blue-600;
+  width: 160px;
+  height: 55px;
+  border-radius: 9px;
+  padding: 16px;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: center;
+  color: $white-color;
+  display: block;
+  @include sm-down {
+    width: 100%;
+  }
+}
+.eleven-right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 60px;
+  max-width: 630px;
+  @include lg-down {
+    padding-inline: 20px;
+    padding-block: 40px;
+  }
+}
+.signup-row {
+  display: flex;
+  margin-top: 20px;
+  padding: 8px;
+  @include sm-down {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+}
+
+.signup-row a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $blue-600;
+}
+
+.Account-text {
+  margin-right: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $blue-gray-5;
+}
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  max-width: 526px;
+  width: 100%;
+  padding: 8px;
+  @include sm-down {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+}
+.checkbox-label {
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $gray-900;
+}
+#rememberMe {
+  transform: scale(0.8);
+  margin-right: 5px;
+}
+.forgot-pswrd {
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $blue-600;
+  text-decoration: none;
+}
+//twelve component
+.twelve-container {
+  background-color: $black;
+}
+.faq-subtitle {
+  font-family: IBM Plex Sans;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-align: left;
+  background: linear-gradient(98.24deg, #6ddcff 0%, #7f60f9 100%);
+}
+.twelve-container h1 {
+  font-family: IBM Plex Sans;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $white-color;
+  align-items: center;
+  justify-content: center;
+  @include md-down {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+  @include sm-down {
+    font-size: 2.4rem;
+  }
+}
+
+.faq {
+  margin: 5px;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid $white-color;
+}
+.FAQ-section {
+  padding: 40px;
+  @include sm-down {
+    padding-inline: 10px;
+    padding-block: 30px;
+  }
+}
+.faq-container {
+  margin-top: 2rem;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: IBM Plex Sans;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 54px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $white-color;
+  @include md-down {
+    font-size: 1.8rem;
+  }
+  @include sm-down {
+    font-size: 1.4rem;
+    line-height: 30px;
+  }
+}
+
+.plus-icon {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.5625rem;
+  color: $white-color;
+}
+.answer {
+  display: none;
+  padding: 15px 0;
+  color: $white-color;
+  font-family: IBM Plex Sans;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: left;
+  @include md-down {
+    font-size: 1.5rem;
+  }
+  @include sm-down {
+    font-size: 1rem;
+  }
+}
+
+.faq.active .answer {
+  display: block;
+}
+//thirteen component
+.thirteen-container {
+  margin-top: 5rem;
+  padding-inline: 20px;
+}
+.second-form-input {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 472.44px;
+  height: 65px;
+  padding: 16px;
+  border-radius: 9px;
+  border: 1px solid $gray-200;
+  color: $white-color;
+  display: block;
+  margin-bottom: 1rem;
+}
+.remember-forgot-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  max-width: 472.44px;
+  width: 100%;
+  padding: 16px;
+  @include sm-down {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+.form-container {
+  box-shadow: 0px 10px 15px 0px #00000008;
+  box-shadow: 0px 3px 11px 0px #0000000f;
+  max-width: 533px;
+  height: auto;
+  background-color: $white-color;
+  border-radius: 20px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 2rem;
+}
+.second-checkbox-label,
+.second-forgot-pswrd {
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $base-2;
+  text-decoration: none;
+}
+.second-signup-btn {
+  background-color: $blue-600;
+  width: 100%;
+  height: 65px;
+  border-radius: 9px;
+  padding: 16px;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: center;
+  color: $white-color;
+  display: block;
+}
+.second-form-input::placeholder {
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: $gray-600;
+}
+.thirteen-container h1 {
+  font-family: Poppins;
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 62px;
+  letter-spacing: -2px;
+  text-align: center;
+  color: $base-2;
+  margin-bottom: 1rem;
+  @include sm-down {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+.thirteen-container p {
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: $gray-600;
+  @include sm-down {
+    font-size: 1rem;
+  }
+}
