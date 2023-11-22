@@ -321,11 +321,12 @@ button {
   border-radius: 6px;
 }
 
-/* Outline button styles */
 .outline-button {
   background-color: linear-gradient(0deg, #D0D5DD, #D0D5DD);
   border: 1px solid linear-gradient(0deg, #D0D5DD, #D0D5DD);
   color: #344054;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .outline-button:hover {
@@ -333,10 +334,10 @@ button {
   color: #FFFFFF;
 }
 
-/* Filled button styles */
 .filled-button {
-  background-color: #7F56D9;
+  background-color: #6941C6;
   color: #FFFFFF;
+  border-radius: 8px;
 }
 
 .filled-button:hover {
@@ -1348,11 +1349,7 @@ a:hover {
 .eleven-profile-container {
   display: flex;
   gap: 20px;
-}
-@media (max-width: 767px) {
-  .eleven-profile-container {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 }
 
 .eleven-header h1 {
@@ -1437,6 +1434,11 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media (max-width: 767px) {
+  .eleven-content {
+    margin-top: 2rem;
+  }
 }
 
 .form-label {
@@ -1533,12 +1535,7 @@ a:hover {
   display: flex;
   margin-top: 20px;
   padding: 8px;
-}
-@media (max-width: 575px) {
-  .signup-row {
-    flex-direction: column;
-    row-gap: 0.5rem;
-  }
+  flex-wrap: wrap;
 }
 
 .signup-row a {
@@ -1570,12 +1567,8 @@ a:hover {
   max-width: 526px;
   width: 100%;
   padding: 8px;
-}
-@media (max-width: 575px) {
-  .remember-forgot {
-    flex-direction: column;
-    row-gap: 0.5rem;
-  }
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .checkbox-label {
@@ -1718,6 +1711,17 @@ a:hover {
   display: block;
 }
 
+.Arrow-icon {
+  max-width: 30px;
+  height: 30px;
+}
+@media (max-width: 575px) {
+  .Arrow-icon {
+    max-width: 10px;
+    height: 10px;
+  }
+}
+
 .thirteen-container {
   margin-top: 5rem;
   padding-inline: 20px;
@@ -1735,20 +1739,20 @@ a:hover {
   display: block;
   margin-bottom: 1rem;
 }
+@media (max-width: 575px) {
+  .second-form-input {
+    padding: 3px;
+  }
+}
 
 .remember-forgot-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 10px;
   max-width: 472.44px;
   width: 100%;
   padding: 16px;
-}
-@media (max-width: 575px) {
-  .remember-forgot-container {
-    flex-direction: column;
-    row-gap: 1rem;
-  }
 }
 
 .form-container {
@@ -1761,6 +1765,9 @@ a:hover {
   padding: 20px;
   margin: auto;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .second-checkbox-label,
@@ -1841,4 +1848,440 @@ a:hover {
   .thirteen-container p {
     font-size: 1rem;
   }
+}
+
+.second-signup-row {
+  display: flex;
+  margin-top: 20px;
+  padding: 8px;
+  flex-wrap: wrap;
+}
+
+.second-signup-row a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #2563EB;
+}
+
+.second-Account-text {
+  margin-right: 5px;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #64748B;
+}
+
+.signup-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: #F8FAFC;
+  color: #1E293B;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.200000003px;
+  text-align: center;
+  height: auto;
+}
+
+.signup-btn img {
+  margin-right: 8px;
+}
+
+.fourteen-container {
+  background-color: #000000;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+.fourteen-content {
+  padding: 60px;
+}
+
+.fourteen-content h1 {
+  font-family: IBM Plex Sans;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+}
+
+.Landing-Info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 767px) {
+  .Landing-Info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .Landing-Info {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.second-landing-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 575px) {
+  .second-landing-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+.landing-facts {
+  margin-top: 3rem;
+  padding: 50px;
+  text-align: center;
+}
+@media (max-width: 575px) {
+  .landing-facts {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
+.landing-facts span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 0px;
+  background: linear-gradient(98.24deg, #6ddcff 0%, #7f60f9 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.landing-facts p {
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #98A2B3;
+  text-align: center;
+  min-width: 0;
+}
+
+.Landing-Info .landing-facts:nth-child(-n+3) {
+  border-bottom: 2px solid #18181B;
+}
+
+.Landing-Info .landing-facts:nth-child(2) {
+  border-left: 2px solid #18181B;
+  border-right: 2px solid #18181B;
+}
+@media (max-width: 767px) {
+  .Landing-Info .landing-facts:nth-child(2) {
+    border-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  .Landing-Info .landing-facts:nth-child(2) {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .Landing-Info .landing-facts:nth-child(3) {
+    grid-column: span 3;
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .Landing-Info .landing-facts:nth-child(3) {
+    grid-column: span 1;
+  }
+}
+
+.second-landing-info .landing-facts:nth-child(2) {
+  border-left: 2px solid #18181B;
+}
+@media (max-width: 575px) {
+  .second-landing-info .landing-facts:nth-child(2) {
+    border-left: 0;
+  }
+}
+
+/* Remove gap between first and second rows */
+.second-landing-info .landing-facts:nth-child(n+1) {
+  margin-top: 1px;
+}
+@media (max-width: 575px) {
+  .second-landing-info .landing-facts:nth-child(n+1) {
+    border-bottom: 2px solid #18181B;
+  }
+}
+
+.strt-free-btn {
+  border: 2px solid #0F172A;
+  border-radius: 8px;
+  height: 50px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #0F172A;
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.style {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #18181B;
+}
+
+.sixteen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sixteen-header h1 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #18181B;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #7F56D9;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  height: 50px;
+}
+
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.icon-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.download-btn {
+  border: 2px solid #667085;
+  border-radius: 8px;
+  height: 50px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #344054;
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.0509803922);
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #E4E4E7;
+}
+
+th {
+  background-color: #E4E4E7;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #667085;
+}
+
+.select {
+  background-color: linear-gradient(0deg, #d0d5dd, #d0d5dd), linear-gradient(0deg, #ffffff, #ffffff);
+  border: 1px solid #d0d5dd;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    margin: 0 0 1rem 0;
+  }
+  tr:nth-child(odd) {
+    background: #ccc;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  /*
+  Label the data
+  You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+  */
+}
+@media only screen and (max-width: 767px) and (max-width: 767px) {
+  td:before {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 767px) and (max-width: 756px) {
+  td:before {
+    width: 100%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  td:nth-of-type(1):before {
+    content: "File name";
+  }
+  td:nth-of-type(2):before {
+    content: "File size";
+  }
+  td:nth-of-type(3):before {
+    content: "Data Uploaded";
+  }
+  td:nth-of-type(4):before {
+    content: "Last Updated";
+  }
+  td:nth-of-type(5):before {
+    content: "Uploaded by";
+  }
+}
+.file-name {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.file-img {
+  width: 40px;
+  height: 40px;
+}
+
+.file-data h3 {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #18181B;
+}
+
+.file-data p,
+td {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #667085;
+}
+
+.uploaded-by {
+  display: flex;
+  gap: 3rem;
 }/*# sourceMappingURL=index.css.map */

@@ -164,6 +164,7 @@
   text-align: center;
   color: $gray-500;
 }
+
 /* Common button styles */
 button {
   padding: 15px 20px;
@@ -173,23 +174,21 @@ button {
   border: none;
   border-radius: 6px;
 }
-
-/* Outline button styles */
 .outline-button {
   background-color: $gray-300;
   border: 1px solid $gray-300;
   color: $gray-700;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
-
 .outline-button:hover {
   background-color: $primary-600;
   color: $white-color;
 }
-
-/* Filled button styles */
 .filled-button {
-  background-color: $primary-600;
+  background-color: $primary-700;
   color: $white-color;
+  border-radius: 8px;
 }
 
 .filled-button:hover {
@@ -1028,9 +1027,7 @@ a:hover {
 .eleven-profile-container {
   display: flex;
   gap: 20px;
-  @include md-down {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 }
 .eleven-header h1 {
   font-family: Poppins;
@@ -1099,6 +1096,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  @include md-down {
+    margin-top: 2rem;
+  }
 }
 
 .form-label {
@@ -1182,10 +1182,7 @@ a:hover {
   display: flex;
   margin-top: 20px;
   padding: 8px;
-  @include sm-down {
-    flex-direction: column;
-    row-gap: 0.5rem;
-  }
+  flex-wrap: wrap;
 }
 
 .signup-row a {
@@ -1216,10 +1213,8 @@ a:hover {
   max-width: 526px;
   width: 100%;
   padding: 8px;
-  @include sm-down {
-    flex-direction: column;
-    row-gap: 0.5rem;
-  }
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .checkbox-label {
   font-family: Poppins;
@@ -1338,6 +1333,14 @@ a:hover {
 .faq.active .answer {
   display: block;
 }
+.Arrow-icon {
+  max-width: 30px;
+  height: 30px;
+  @include sm-down {
+    max-width: 10px;
+    height: 10px;
+  }
+}
 //thirteen component
 .thirteen-container {
   margin-top: 5rem;
@@ -1354,18 +1357,18 @@ a:hover {
   color: $white-color;
   display: block;
   margin-bottom: 1rem;
+  @include sm-down {
+    padding: 3px;
+  }
 }
 .remember-forgot-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 10px;
   max-width: 472.44px;
   width: 100%;
   padding: 16px;
-  @include sm-down {
-    flex-direction: column;
-    row-gap: 1rem;
-  }
 }
 .form-container {
   box-shadow: 0px 10px 15px 0px #00000008;
@@ -1377,6 +1380,9 @@ a:hover {
   padding: 20px;
   margin: auto;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .second-checkbox-label,
 .second-forgot-pswrd {
@@ -1438,4 +1444,407 @@ a:hover {
   @include sm-down {
     font-size: 1rem;
   }
+}
+.second-signup-row {
+  display: flex;
+  margin-top: 20px;
+  padding: 8px;
+  flex-wrap: wrap;
+}
+
+.second-signup-row a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: $blue-600;
+}
+
+.second-Account-text {
+  margin-right: 5px;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: $blue-gray-5;
+}
+.signup-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: $blue-gray-50;
+  color: $blue-gray-8;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: center;
+  height: auto;
+}
+.signup-btn img {
+  margin-right: 8px;
+}
+//fourteen component
+.fourteen-container {
+  background-color: $black;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+.fourteen-content {
+  padding: 60px;
+}
+
+.fourteen-content h1 {
+  font-family: IBM Plex Sans;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: $white-color;
+  align-items: center;
+  justify-content: center;
+}
+
+.Landing-Info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include md-down {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm-down {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.second-landing-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  @include sm-down {
+    grid-template-columns: 1fr;
+  }
+}
+
+.landing-facts {
+  margin-top: 3rem;
+  padding: 50px;
+  text-align: center;
+  @include sm-down {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+.landing-facts span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 0px;
+  background: linear-gradient(98.24deg, #6ddcff 0%, #7f60f9 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.landing-facts p {
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: $gray-400;
+  text-align: center;
+  min-width: 0;
+}
+.Landing-Info .landing-facts:nth-child(-n + 3) {
+  border-bottom: 2px solid $gray-900;
+}
+.Landing-Info .landing-facts:nth-child(2) {
+  border-left: 2px solid $gray-900;
+  border-right: 2px solid $gray-900;
+  @include md-down {
+    border-right: 0;
+  }
+  @include sm-down {
+    border-left: 0;
+  }
+}
+.Landing-Info .landing-facts:nth-child(3) {
+  @include md-down {
+    grid-column: span 3;
+    text-align: center;
+  }
+  @include sm-down {
+    grid-column: span 1;
+  }
+}
+.second-landing-info .landing-facts:nth-child(2) {
+  border-left: 2px solid $gray-900;
+  @include sm-down {
+    border-left: 0;
+  }
+}
+/* Remove gap between first and second rows */
+.second-landing-info .landing-facts:nth-child(n + 1) {
+  margin-top: 1px;
+  @include sm-down {
+    border-bottom: 2px solid $gray-900;
+  }
+}
+
+// fifteen component
+.strt-free-btn {
+  border: 2px solid $blue-900;
+  border-radius: 8px;
+  height: 50px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: $blue-900;
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.style {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: $gray-900;
+}
+
+//sixteen component
+.sixteen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sixteen-header h1 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $gray-900;
+}
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: $primary-600;
+  color: $white-color;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  height: 50px;
+}
+
+.icon-btn img {
+  width: 24px; 
+  height: 24px; 
+  margin-right: 10px;
+}
+
+.icon-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.download-btn {
+  border: 2px solid $gray-500;
+  border-radius: 8px;
+  height: 50px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $gray-700;
+  padding: 10px 20px;
+  background-color: $white-color;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+tbody tr {
+  border-bottom: 1px solid $gray-200; 
+}
+
+th {
+  background-color: $gray-200;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $gray-500;
+}
+.select {
+  background-color: linear-gradient(0deg, #d0d5dd, #d0d5dd),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  border: 1px solid #d0d5dd;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+}
+.file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+  }
+
+  tr:nth-child(odd) {
+    background: #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+
+    @media only screen and (max-width: 767px) {
+      width: 80%;
+      margin: auto;
+    }
+    @media only screen and (max-width: 756px) {
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  /*
+Label the data
+You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+*/
+  td:nth-of-type(1):before {
+    content: "File name";
+  }
+  td:nth-of-type(2):before {
+    content: "File size";
+  }
+  td:nth-of-type(3):before {
+    content: "Data Uploaded";
+  }
+  td:nth-of-type(4):before {
+    content: "Last Updated";
+  }
+  td:nth-of-type(5):before {
+    content: "Uploaded by";
+  }
+}
+.file-name {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.file-img {
+  width: 40px;
+  height: 40px;
+}
+.file-data h3 {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $gray-900;
+}
+.file-data p,
+td {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $gray-500;
+}
+.uploaded-by {
+  display: flex;
+  gap: 3rem;
 }
